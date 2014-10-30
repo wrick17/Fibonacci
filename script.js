@@ -49,6 +49,8 @@ $(document).ready(function(){
 		var first = $(".first").val();
 		var second = $(".second").val();
 
+		var arr = [];
+
 		if (first == "" || second == "") {
 			if (first == "") {
 				$(".first").css("box-shadow","0px 0px 10px red");
@@ -64,10 +66,39 @@ $(document).ready(function(){
 			$(".right-container").html("<p>The list</p><a class=\"right-handle\" href=\"#\"></a>");
 			$(".first").blur();
 			$(".second").blur();
-			fib(first,second);
+			fib(first,second,arr);
 		}
 
+		var str = "";
+		for (var i = 0 ; i <= arr.length - 1; i++) {
+			str = str +"<span>"+arr[i]+"</span>";
+		};
+		$(".right-handle").after(str);
+
 	});
+
+	var fib = function(prime,sec,arr){
+		
+		var temp = 0;
+
+		if (prime == sec) {
+			arr.push(sec);
+		}
+		
+		temp = prime - sec;
+
+		arr.push(prime);
+
+		prime = sec;
+		sec = temp;
+
+		if (prime > 0 && sec > 0) {
+			fib(prime,sec,arr);
+		}
+
+		
+	};
+
 
 	$(".go").click(function(){
 
@@ -86,16 +117,23 @@ $(document).ready(function(){
 
 		var prime = 1;
 		var sec = 1;
+		var arr = [];
 
 		$(".left-container").html("<p>The list</p><a class=\"left-handle\" href=\"#\"></a>");
-		$(".left-handle").after("<span>"+sec+"</span>");
-		$(".left-handle").after("<span>"+prime+"</span>");
+		arr.push(prime);
+		arr.push(sec);
 
-		fibonacci(sec,prime,limit);
+		fibonacci(sec,prime,limit,arr);
+
+		var str = "";
+		for (var i = arr.length - 1 ; i >= 0 ; i--) {
+			str = str +"<span>"+arr[i]+"</span>";
+		};
+		$(".left-handle").after(str);
 
 	};
 
-	var fibonacci = function(sec,prime,limit){
+	var fibonacci = function(sec,prime,limit,arr){
 
 		var temp = 0;
 		if (limit > 2) {
@@ -105,32 +143,11 @@ $(document).ready(function(){
 			prime = temp;
 			limit = limit - 1;
 
-			$(".left-handle").after("<span>"+prime+"</span>");
-			fibonacci(sec,prime,limit);
+			arr.push(prime);
+			fibonacci(sec,prime,limit,arr);
 		};
 
 	};
 
-	var fib = function(prime,sec){
-		
-		var temp = 0;
-
-		if (prime == sec) {
-			$(".right-handle").before("<span>"+sec+"</span>");
-		}
-		
-		temp = prime - sec;
-
-		$(".right-handle").before("<span>"+prime+"</span>");
-
-		prime = sec;
-		sec = temp;
-
-		if (prime > 0 && sec > 0) {
-			fib(prime,sec);
-		}
-
-		
-	};
-
+	
 });
