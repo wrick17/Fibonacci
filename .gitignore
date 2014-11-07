@@ -1,6 +1,6 @@
-/css/*
-/js/*
-/node-modules/*
+css/*
+js/*
+node_modules/*
 Gruntfile.js
 package.json
 
