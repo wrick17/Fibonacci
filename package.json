@@ -1,0 +1,24 @@
+{
+  "name": "ember",
+  "version": "1.0.0",
+  "description": "grunt",
+  "main": "app.js",
+  "dependencies": {
+    "grunt": "^0.4.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wrick17/Fibonacci.git"
+  },
+  "devDependencies": {
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "author": "me",
+  "license": "ISC"
+}

@@ -1,0 +1,85 @@
+body {
+    background: #d7e8bf;
+}
+main {
+    overflow: auto;
+    width: 98%;
+    height: auto;
+    margin: auto;
+}
+.left-wrapper, .right-wrapper {
+    float: left;
+    width: 570px;
+    margin: 30px;
+    padding: 10px;
+    padding-top: 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+h1 {
+    margin: 0;
+    padding: 10px 0;
+    color: white;
+    border-radius: 5px;
+    background: #0b3f32;
+}
+.first, .second, .limit {
+    font-family: sans-serif;
+    width: 300px;
+    height: 40px;
+    margin: 10px;
+    text-align: center;
+    color: #0b3f32;
+    border-color: transparent;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #aaa;
+}
+.first:focus, .second:focus, .limit:focus {
+    outline: none;
+    box-shadow: 1px 1px 10px #0b3f32 !important;
+}
+.submit, .go {
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100px;
+    height: 40px;
+    margin: 20px;
+    color: #fff;
+    border: 1px solid #0b3f32;
+    border-radius: 5px;
+    background: #0b3f32;
+    box-shadow: 5px 5px 10px #697875;
+}
+.submit:focus, .go:focus {
+    border-color: transparent;
+    outline: none;
+    box-shadow: 5px 5px 10px #aaa;
+}
+.button-clicked {
+    box-shadow: 0 0 10px #aaa;
+}
+.left-container, .right-container {
+    line-height: 2em;
+    word-wrap: break-word;
+}
+.left-container {
+    margin-top: 78px;
+}
+p {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    width: 550px;
+    height: 30px;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    background: #0b3f32;
+}
+span {
+    padding: 20px 10px;
+}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
